@@ -1,5 +1,6 @@
 Week 2 Changes
-![image](https://user-images.githubusercontent.com/60376265/143401273-06aff796-f312-4299-8b20-c1e06642bec0.png)
+![image](https://user-images.githubusercontent.com/60376265/143401858-4e0bb6fa-b27c-48b7-b2d2-ff36114d7020.png)
+
 
 ### What I've Worked On
 - Worked on updating the register html file to look more professional
