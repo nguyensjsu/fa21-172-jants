@@ -1,4 +1,5 @@
-Week 2 Changes
+## Week 2 Changes
+</br>
 ![image](https://user-images.githubusercontent.com/60376265/143401858-4e0bb6fa-b27c-48b7-b2d2-ff36114d7020.png)
 
 
