@@ -41,6 +41,10 @@ header {
   font-family: arial;
 }
 
+.card h1{
+  font-size: large;
+}
+
 .price {
   color: grey;
   font-size: 22px;
@@ -70,23 +74,28 @@ header {
 .menu-bar ul li input
 {
   text-decoration: none;
-  color: red;
+  color: var(--coffee-brown);
   background-color: white;
   padding: 2px;
-  border: 1px solid red;
+  border: 1px solid var(--coffee-brown);
 }
 
 .menu-bar ul li input:hover
 {
-  background-color: red;
+  background-color: var(--coffee-brown);
   color: white;
+}
+
+:root {
+  --coffee-brown: rgb(167, 91, 41);
 }
 
 .box
 {
   width: 400px;
   height: 500px;
-  background: lightcoral;
+  background: var(--coffee-brown);
+  border: black;
   top: 60%;
   left: 50%;
   position: absolute;
