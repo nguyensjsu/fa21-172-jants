@@ -3,15 +3,22 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Starbucks Online Store</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link href = "styles.css" rel = "stylesheet" type = "text/css">
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container text-center">
+    <div class="logo">
+        <img src="./images/logo.png" alt="logo" width="60px">
+      </div>
+    <header>
         <h1>Welcome to Starbucks</h1>
-        <h3><a th:href="@{/register}">Register</a></h3>
+    </header>
+    <div class="home">
+        <button id="register"><a th:href="@{/register}">Register</a></button>
+        <!-- <button id="register"><a href="register.html">Register</a></button> -->
     </div>
+    
      
 </body>
 </html>
