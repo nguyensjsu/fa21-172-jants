@@ -9,7 +9,7 @@
 - mapped funcitonality of payment page to display when a certain drink is selected
 
 ### Challenges and What needs to be worked on
-- mapping each drink to a certain price in the payment page
-- updating payment page to output drink chosen by user
+- mapping each drink to a certain price in the payment page (done: 11/25)
+- updating payment page to output drink chosen by user (done: 11/25)
 - updating sql database to show drink purchased by user
 - mapping register page to login page then to the drinks page
