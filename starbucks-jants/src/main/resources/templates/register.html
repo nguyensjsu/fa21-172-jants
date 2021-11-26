@@ -10,22 +10,22 @@
 </head>
 <body>
     <div class="logo">
-        <img src="./images/logo.png" alt="logo" width="60px">
+        <img src="images/logo.png" alt="logo" width="60px">
       </div>
       <header>
         <h1>New User Sign Up Sheet</h1>
       </header>
     <div class="box">
             <h1>Sign Up</h1>
-            <form name="form2" method="post">
+            <form th:action="@{/registration_success}" th:object="${user}" name="form2" method="post">
                  <p>First Name</p>
-                 <input type="text" name="i1" placeholder="Enter First Name">
+                 <input type="text" th:field="*{first_name}" required minlength="1" name="i1" placeholder="Enter First Name">
                  <p>Last Name</p>
-                 <input type="text" name="i2" placeholder="Enter Last Name">
+                 <input type="text" th:field="*{last_name}" required minlength="1" name="i2" placeholder="Enter Last Name">
                  <p>Email</p>
-                 <input type="email" name="i3" placeholder="Enter Email">
+                 <input type="email" th:field="*{email}" required name="i3" placeholder="Enter Email">
                  <p> Password</p>
-                 <input type="text" name="i4" placeholder="Enter Password">
+                 <input type="password" th:field="*{password}" required minlength="1" name="i4" placeholder="Enter Password">
                  <input type="submit" name="b1" value="Sign Up">
             </form>
 
