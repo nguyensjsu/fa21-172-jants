@@ -23,6 +23,32 @@ header {
   text-shadow: 2px 2px black;
 }
 
+.home {
+  width: 300px;
+  height: 100px;
+  background: var(--coffee-brown);
+  border: solid 2px black;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 30px 30px;
+}
+
+.home #register {
+  padding: 30px 90px;
+  position: relative;
+  top: -22px; 
+}
+
+.home #register a {
+  color: black;
+  text-decoration: none;
+}
+
+
 .row {
   margin: 0 -5px;
 }
@@ -144,4 +170,17 @@ header {
 {
     background: white;
     color: #327346;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #327346; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #327346; 
 }
