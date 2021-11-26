@@ -48,6 +48,33 @@ header {
   text-decoration: none;
 }
 
+.home p {
+  position: relative;
+  bottom: 25px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.home a {
+  text-decoration: none;
+  color: white;
+}
+
+.home .seeDrinks {
+  border: none;
+  padding: 10px;
+    outline: none;
+    height: 40px;
+    background: #327346;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: relative;
+    left: 40px;
+}
+
 .row {
   margin: 0 -5px;
 }
