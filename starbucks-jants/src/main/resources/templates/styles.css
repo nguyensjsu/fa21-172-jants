@@ -184,3 +184,11 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background: #327346; 
 }
+
+footer {
+  position: fixed;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   text-align: center;
+}
