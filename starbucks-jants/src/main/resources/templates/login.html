@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,46 +8,52 @@
     <title> Welcome..! </title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="login.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
   </head>
   <body>
-
+    <div class="logo">
+      <img src="./images/logo.png" alt="logo" width="60px">
+    </div>
     <header>
         <div class="container">
-          <h2>Starbucks</h2>
+          <h1>Login</h1>
         </div>
     </header>
 
-
-    <section id="login">
-     <div id="container">
-      <div class="back-image">
-       <h3>The Doorway to your<br> favorite drink</h3><br>
-        <form name="form" method="post">
-         <div id="username_div">
-          <input type="text" name="username" placeholder="Email ID" class="user">
-          <div id="name_error"></div>
-   	     </div>
-         <div id="password_div">
-          <input type="password" name="password" placeholder="Password" class="pass">
-          <div id="password_error"></div>
+<div class="box">
+  <section id="login">
+    <div id="container">
+     <div class="back-image">
+      <h3>The Doorway to your favorite drink</h3><br>
+       <form name="form" method="post">
+        <div id="username_div">
+         <input type="text" name="username" placeholder="Email ID" class="user">
+         <div id="name_error"></div>
          </div>
-          <p class="reg"><a href="register.html">First Time? Register here</a></p>
+        <div id="password_div">
+         <input type="password" name="password" placeholder="Password" class="pass">
+         <div id="password_error"></div>
+        </div>
+         <p class="reg"><a href="register.html">First Time? Register here</a></p>
 
-         <div>
-           <input type="submit" name="logbutton" class="button" value="Login">
+        <div>
+          <input type="submit" name="logbutton" class="button" value="Login">
 
-         </div>
-       </form>
-     </div>
+        </div>
+      </form>
     </div>
-   </section>
+   </div>
+  </section>
+</div>
+    
 
-    <footer id="footer" class="static-footer">
+    <!-- <footer id="footer" class="static-footer">
       <div class="container">
         <p>Made by Prof. Paul Nguyen's Students</p>
       </div>
+    </footer> -->
+    <footer>
+      Made by Prof. Paul Nguyen's students
     </footer>
   </body>
 </html>
