@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Drinks</title>
+</head>
+<body>
+  <div class="logo">
+    <img src="images/logo.png" alt="logo" width="60px">
+  </div>
+  <header>
+    <h1>All Drinks</h1>
+  </header>
+
+
+  
+  <hr />
+  <div class="row">
+    <form th:action="@{/creditcards/MochaFrap}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/MochaFrap.jpeg" alt="${drink_order_name}" style="width:100%">
+        <h1>Mocha Frappuchino</h1>
+        <p class="price" >$4.45</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Tripleshot}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Tripleshot.jpeg" alt="${drink_order_name}" style="width:100%">
+        <h1>Tripleshot Energy</h1>
+        <p class="price" >$2.84</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Pumpkincreamlatte}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Pumpkincreamlatte.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Pumpkin Cream Brew</h1>
+        <p class="price" >$5.25</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Caramelfrap}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Caramelfrap.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Caramel Frappuchino</h1>
+        <p class="price">$4.45</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Toastedwcmocha}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Toastedwcmocha.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Toasted White Chocolate Mocha</h1>
+        <p class="price" >$4.65</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Chestnutpralinelatte}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Chestnutpralinelatte.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Chestnut Praline Latte</h1>
+        <p class="price" >$4.65</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Peppermintmocha}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Peppermintmocha.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Peppermint Mocha</h1>
+        <p class="price" >$4.65</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Nitro}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Nitro.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Nitro Cold Brew</h1>
+        <p class="price" >$3.95</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Caramelbruleelatte}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Caramelbruleelatte.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Caramel Brulée Latte</h1>
+        <p class="price" >$4.45</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </form>
+    </div>
+    <form th:action="@{/creditcards/Applecrisp}" method="get" th:object="${user}">
+    <div class="column">
+      <div class="card">
+        <img src="images/Applecrisp.jpg" alt="${drink_order_name}" style="width:100%">
+        <h1>Apple Crisp Macchiato</h1>
+        <p class="price" >$5.45</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </form>
+  </div>
+
+
+  
+  
+</body>
+</html>
