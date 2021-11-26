@@ -154,7 +154,7 @@ header {
   width: 400px;
   height: 500px;
   background: var(--coffee-brown);
-  border: black;
+  border: solid 1px black;
   top: 60%;
   left: 50%;
   position: absolute;
