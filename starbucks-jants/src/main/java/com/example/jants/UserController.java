@@ -20,6 +20,26 @@ public class UserController {
         return "home_page";
     }
 
+    @Getter
+    @Setter
+    class Message{
+        private String msg;
+        public Message(String m) {this.msg = m;}
+    }
+    class ErrorMessages{
+        private ArrayList<Message> messages = new ArrayList<Message>();
+        public void add(String msg) {
+            messages.add(new Message(msg));
+        }
+        public ArrayList<Message> getMessages() {
+            return messages;
+        }
+        public void print(){
+            for(Message m: messages){
+                System.out.println(m.msg);
+            }
+        }
+    }
  
     // when the login button is clicked on the homepage, the login page will show up
     @GetMapping(path = "/login")
