@@ -25,6 +25,13 @@ public class UserController {
     @GetMapping(path = "/login")
     public String loginPage(User user)
     {
+        return "login";
+    }
+
+    // when login button is clicked on Login page, it will go here for validation
+    @GetMapping(path = "/validation")
+    public String validationPage(User user)
+    {
         ErrorMessages msgs = new ErrorMessages();
         User find_user = user_repository.findByEmail(user.getEmail());
         if(find_user == null)
