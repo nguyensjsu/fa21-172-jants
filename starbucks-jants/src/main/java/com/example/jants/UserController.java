@@ -20,6 +20,21 @@ public class UserController {
         return "home_page";
     }
 
+    
+     // when the login button is clicked on the homepage, the login page will show up
+    @GetMapping(path = "/login")
+    public String loginPage(Model model){
+        model.addAttribute("user", new User());
+        return "login";
+    }
+
+    // post mapping to reset password
+    @PostMapping(path = "/reset_password")
+    public String resetPassword()
+    {
+        return "reset_password";
+    }
+    
     // when the register button is clicked on the homepage, the register page will show up
     @GetMapping(path = "/register")
     public String registerPage(Model model){
