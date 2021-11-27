@@ -20,12 +20,26 @@ public class UserController {
         return "home_page";
     }
 
-    
-     // when the login button is clicked on the homepage, the login page will show up
+ 
+    // when the login button is clicked on the homepage, the login page will show up
     @GetMapping(path = "/login")
-    public String loginPage(Model model){
-        model.addAttribute("user", new User());
-        return "login";
+    public String loginPage(User user)
+    {
+        ErrorMessages msgs = new ErrorMessages();
+        User find_user = user_repository.findByEmail(user.getEmail());
+        if(find_user == null)
+        {
+            msgs.add("Email Address Not Found");
+            msgs.print();
+            return "login";
+        }
+        String savedPassword = user.getPassword();
+        if(savedPassword != user.getPassword()) {
+            msgs.add("Incorrect Password");
+            msgs.print();
+            return "login";
+        }
+        return "drinks";
     }
 
     // post mapping to reset password
