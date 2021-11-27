@@ -57,7 +57,7 @@ public class UserController {
     {
         return "reset_password";
     }
-
+ 
     // when the login button is clicked on the homepage, the login page will show up
     @GetMapping(path = "/login")
     public String loginPage(User user)
