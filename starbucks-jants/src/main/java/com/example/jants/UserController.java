@@ -50,23 +50,32 @@ public class UserController {
     public String homePage() {
         return "home_page";
     }
-
+    
     // post mapping to reset password
     @GetMapping(path = "/reset_password")
-    public String resetPassword()
+    public String resetPassword(User user)
     {
+        User find_user = user_repository.findByEmail(user.getEmail());
+     
+        if(find_user != null)
+        {
+                user.setPassword(user.getPassword());
+        }
         return "reset_password";
+     
     }
- 
+    
+    
     // when the login button is clicked on the homepage, the login page will show up
     @GetMapping(path = "/login")
     public String loginPage(User user)
     {
         return "login";
     }
-
+    
+    
     // when login button is clicked on Login page, it will go here for validation
-    @PostMapping(path = "/drinks")
+    @PostMapping(path = "/start_page")
     public String validationPage(User user)
     {
         ErrorMessages msgs = new ErrorMessages();
@@ -83,8 +92,10 @@ public class UserController {
             msgs.print();
             return "login";
         }
-        return "drinks";
+        return "start_page";
     }
+    
+    
     
     // when the register button is clicked on the homepage, the register page will show up
     @GetMapping(path = "/register")
@@ -110,6 +121,14 @@ public class UserController {
         }
         return "registration_success";
     }
+    
+    
+     @PostMapping(path = "/password_changed")
+    public String changedPage(User user){
+
+        return "password_changed";
+    }
+    
     
     @GetMapping(path = "/start_page")
     public String startPage(Model model){
