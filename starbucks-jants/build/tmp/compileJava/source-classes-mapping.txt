@@ -43,8 +43,8 @@ com/example/jants/UserRepository.java
  com.example.jants.UserRepository
 com/example/springpayments/PaymentsCommand.java
  com.example.springpayments.PaymentsCommand
-com/example/jants/UserController.java
- com.example.jants.UserController
+com/example/springpayments/PaymentsCommandRepository.java
+ com.example.springpayments.PaymentsCommandRepository
 com/example/restAPI/StarbucksOrder.java
  com.example.restAPI.StarbucksOrder
 com/example/springcybersource/Payload.java
@@ -68,5 +68,7 @@ com/example/springcybersource/CyberSourceAPI.java
  com.example.springcybersource.CyberSourceAPI$PostResponse
 com/example/drinkslist/Nitro.java
  com.example.drinkslist.Nitro
-com/example/springpayments/PaymentsCommandRepository.java
- com.example.springpayments.PaymentsCommandRepository
+com/example/jants/UserController.java
+ com.example.jants.UserController
+ com.example.jants.UserController$ErrorMessages
+ com.example.jants.UserController$Message
