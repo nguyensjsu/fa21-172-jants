@@ -25,8 +25,8 @@
     <div id="container">
      <div class="back-image">
       <h3>The Doorway to your favorite drink</h3><br>
-       <form th:action="@{/drinks}" th:object="${user}" name="form" method="post">
-        <p>Email Address</p>
+       <form th:action="@{/start_page}" th:object="${user}" name="form" method="post">
+       <p>Email Address</p>
         <input type="email" class="email" th:field="*{email}" placeholder="Enter Email Address">
         <p>Password</p>
         <input type="password" class="pass" th:field="*{password}" placeholder="Enter Password">
