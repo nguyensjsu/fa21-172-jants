@@ -77,8 +77,8 @@ public class UserController {
             msgs.print();
             return "login";
         }
-        String savedPassword = user.getPassword();
-        if(savedPassword != user.getPassword()) {
+        User savedPassword = user_repository.findByPassword(user.getPassword());
+        if(savedPassword == null) {
             msgs.add("Incorrect Password");
             msgs.print();
             return "login";
@@ -99,9 +99,9 @@ public class UserController {
     @PostMapping(path = "/registration_success")
     public String registerUser(User user) throws Exception{
         User find_user = user_repository.findByEmail(user.getEmail());
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String encoded_password = passwordEncoder.encode(user.getPassword());
-        if(find_user == null) {
+        // BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+     //   String encoded_password = passwordEncoder.encode(user.getPassword());
+         if(find_user == null) {
             user.setEmail(user.getEmail());
             user.setPassword(encoded_password);
             user.setFirst_name(user.getFirst_name());
