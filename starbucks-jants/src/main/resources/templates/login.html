@@ -32,12 +32,12 @@
         <input type="password" class="pass" th:field="*{password}" placeholder="Enter Password">
          <p class="reg"><a href="reset_password">Forgot your password?</a></p>
          <br>
-        <div>
-          <input type="submit" name="logbutton" class="button" value="Login">
-          <input type="submit" name="registerInstead" class="button" formaction="register"  value="Register here!!">
-
-        </div>
-      </form>
+           <input type="submit" name="logbutton" class="button" value="Login">
+           <br>
+          </form>
+         <form th:action="@{/register}">
+             <input type="submit" name="regbutton" class="button" value="Register">
+         </form>
     </div>
    </div>
   </section>
