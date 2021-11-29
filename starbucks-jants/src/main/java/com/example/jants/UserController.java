@@ -74,25 +74,25 @@ public class UserController {
     }
 
     // when login button is clicked on Login page, it will go here for validation
-    // @PostMapping(path = "/drinks")
-    // public String validationPage(User user)
-    // {
-    //     ErrorMessages msgs = new ErrorMessages();
-    //     User find_user = user_repository.findByEmail(user.getEmail());
-    //     if(find_user == null)
-    //     {
-    //         msgs.add("Email Address Not Found");
-    //         msgs.print();
-    //         return "login";
-    //     }
-    //     String savedPassword = user.getPassword();
-    //     if(!savedPassword.equals(user.getPassword())) {
-    //         msgs.add("Incorrect Password");
-    //         msgs.print();
-    //         return "login";
-    //     }
-    //     return "drinks";
-    // }
+     @PostMapping(path = "/drinks")
+    public String validationPage(User user)
+     {
+         ErrorMessages msgs = new ErrorMessages();
+         User find_user = user_repository.findByEmail(user.getEmail());
+         if(find_user == null)
+         {
+            msgs.add("Email Address Not Found");
+             msgs.print();
+             return "login";
+         }
+        String savedPassword = user.getPassword();
+         if(!savedPassword.equals(user.getPassword())) {
+            msgs.add("Incorrect Password");
+             msgs.print();
+            return "login";
+         }
+         return "drinks";
+     }
     
     // when the register button is clicked on the homepage, the register page will show up
     @GetMapping("/register")
