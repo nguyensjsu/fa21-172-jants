@@ -25,19 +25,24 @@
     <div id="container">
      <div class="back-image">
       <h3>The Doorway to your favorite drink</h3><br>
-       <form th:action="@{/drinks}" th:object="${user}" name="form" method="post">
-        <p>Email Address</p>
-        <input type="email" class="email" th:field="*{email}" placeholder="Enter Email Address">
+       <form th:action="@{/login}" name="form" method="post">
+       <p>Email Address</p>
+       <input type="email" id="email" name="email" class="email" placeholder="Enter Email Address">
         <p>Password</p>
-        <input type="password" class="pass" th:field="*{password}" placeholder="Enter Password">
-         <p class="reg"><a href="reset_password">Forgot your password?</a></p>
+        <input type="password" id="password" name="password" class="pass" placeholder="Enter Password">
+     
          <br>
-        <div>
-          <input type="submit" name="logbutton" class="button" value="Login">
-          <input type="submit" name="registerInstead" class="button" formaction="register"  value="Register here!!">
-
-        </div>
-      </form>
+           <input type="submit" name="logbutton" class="button" value="Login">
+           <br>
+          </form>
+         <form th:action="@{/register}">
+             <input type="submit" name="regbutton" class="button" value="Register">
+         </form>
+       
+        <form th:action="@{/reset_password}">
+         <input type="submit" name="forget" class="button" value="Forgot your password, click here">
+         </form>
+       
     </div>
    </div>
   </section>

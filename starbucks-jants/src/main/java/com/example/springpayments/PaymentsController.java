@@ -18,6 +18,9 @@ import java.util.Base64.Encoder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -34,6 +37,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import com.example.drinkslist.DrinkOrder;
 import com.example.drinkslist.DrinksList;
+import com.example.jants.User;
+import com.example.jants.UserInfo;
+import com.example.jants.UserRepository;
 import com.example.springcybersource.*;
 
 // referenced code from spring-cybersource as well as follows lab structure of recording on zoom
@@ -127,9 +133,8 @@ public class PaymentsController {
 
 
     @GetMapping("/creditcards/{drink_order_name}")
-    public String getAction( @ModelAttribute("command") PaymentsCommand command, 
+    public String getAction(@Valid @ModelAttribute("command") PaymentsCommand command, 
                             Model model, @PathVariable("drink_order_name") String drink_order_name) {
-        
         DrinksList drink = new DrinkOrder(drink_order_name).set();
         model.addAttribute("price", drink.getPrice());
 
@@ -160,12 +165,19 @@ public class PaymentsController {
         }
     }
 
+    @GetMapping("/orders")
+    public String getListOfPayments(@Valid @ModelAttribute("command") PaymentsCommand command, 
+                                                    Model model, HttpServletRequest request, @AuthenticationPrincipal UserInfo user){
+        List<PaymentsCommand> list_of_payments = payments_repository.findByEmail(user.getUsername());
+        // System.out.println(user.getUsername());
+        model.addAttribute("list_of_payments", list_of_payments);
+        return "orders";
+    }
 
     @PostMapping("/creditcards/{drink_order_name}")
     public String postAction(@Valid @ModelAttribute("command") PaymentsCommand command,  
                             @RequestParam(value="action", required=true) String action,
                             Errors errors, Model model, HttpServletRequest request, @PathVariable("drink_order_name") String drink_order_name){
-        
         DrinksList drink = new DrinkOrder(drink_order_name).set();
         model.addAttribute("price", drink.getPrice());
 
@@ -228,13 +240,15 @@ public class PaymentsController {
         auth.billToZipCode = command.zip() ;
         auth.billToPhone = command.phonenumber() ;
         auth.billToEmail = command.email() ;
-        auth.transactionAmount = drink.getPrice();
-        auth.transactionCurrency = "USD";
-        auth.cardNumnber = command.cardnumber();
-        auth.cardExpMonth = months.get(command.expmonth());
-        auth.cardExpYear = command.expyear();
-        auth.cardCVV = command.cvv();
-        auth.cardType = CyberSourceAPI.getCardType(auth.cardNumnber);
+        String price = drink.getPrice();
+        String new_price = price.replaceAll("[$,]", "");
+        auth.transactionAmount = new_price ;
+        auth.transactionCurrency = "USD" ;
+        auth.cardNumnber = command.cardnumber() ;
+        auth.cardExpMonth = months.get(command.expmonth()) ;
+        auth.cardExpYear = command.expyear() ;
+        auth.cardCVV = command.cvv() ;
+        auth.cardType = CyberSourceAPI.getCardType(auth.cardNumnber) ;
         if(auth.cardType.equals("ERROR")){
             System.out.println("Unsupported credit card type");
             model.addAttribute("message", "Unsupported credit card type");
@@ -261,7 +275,7 @@ public class PaymentsController {
         if(authValid) {
             capture.reference = order_num ;
             capture.paymentId = authResponse.id;
-            capture.transactionAmount = drink.getPrice();
+            capture.transactionAmount = new_price ;
             capture.transactionCurrency = "USD";
             System.out.println("\n\nCapture Request: " + capture.toJson());
             captureResponse = api.capture(capture);
@@ -278,7 +292,8 @@ public class PaymentsController {
         
         if(authValid && captureValid) {
             command.setOrderNumber(order_num);
-            command.setTransactionAmount(drink.getPrice());
+            command.setTransactionAmount(new_price);
+            command.setDrink(drink_order_name);
             command.setTransactionCurrency("USD");
             command.setAuthId(authResponse.id);
             command.setAuthStatus(authResponse.status);

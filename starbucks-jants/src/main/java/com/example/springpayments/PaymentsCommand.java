@@ -1,20 +1,26 @@
 package com.example.springpayments;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="Payments")
 @Data
 @RequiredArgsConstructor
+@Getter
+@Setter
 class PaymentsCommand {
-
     private @Id @GeneratedValue Long id;
+
+    private String drink;
 
     transient private String action ;
     private String firstname ;
@@ -39,6 +45,7 @@ class PaymentsCommand {
     private String captureId;
     private String captureStatus;
 
+    public String drink() {return drink;}
     public String firstname() {return firstname;}
     public String lastname() {return lastname;}
     public String address() {return address;}

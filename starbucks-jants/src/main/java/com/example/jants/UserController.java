@@ -1,6 +1,7 @@
 package com.example.jants;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -46,59 +47,55 @@ public class UserController {
     }
 
     // homePage view when first entering the site
-    @GetMapping(path = "/")
+    @GetMapping("/")
     public String homePage() {
         return "home_page";
     }
-    
-    // post mapping to reset password
-    @GetMapping(path = "/reset_password")
-    public String resetPassword(User user)
-    {
-        User find_user = user_repository.findByEmail(user.getEmail());
-     
-        if(find_user != null)
-        {
-                user.setPassword(user.getPassword());
-        }
-        return "reset_password";
-     
+
+    @GetMapping("/users")
+    public String allUsers(Model model) {
+        List<User> list_of_users = user_repository.findAll();
+        model.addAttribute("list_of_users", list_of_users);
+        return "users";
     }
-    
-    
+
+    // post mapping to reset password
+    @GetMapping("/reset_password")
+    public String resetPassword()
+    {
+        return "reset_password";
+    }
+ 
     // when the login button is clicked on the homepage, the login page will show up
-    @GetMapping(path = "/login")
+    @GetMapping("/login")
     public String loginPage(User user)
     {
         return "login";
     }
-    
-    
+
     // when login button is clicked on Login page, it will go here for validation
-    @PostMapping(path = "/start_page")
-    public String validationPage(User user)
-    {
-        ErrorMessages msgs = new ErrorMessages();
-        User find_user = user_repository.findByEmail(user.getEmail());
-        if(find_user == null)
-        {
-            msgs.add("Email Address Not Found");
-            msgs.print();
-            return "login";
-        }
-        User savedPassword = user_repository.findByPassword(user.getPassword());
-        if(savedPassword == null) {
-            msgs.add("Incorrect Password");
-            msgs.print();
-            return "login";
-        }
-        return "start_page";
-    }
-    
-    
+    // @PostMapping(path = "/drinks")
+    // public String validationPage(User user)
+    // {
+    //     ErrorMessages msgs = new ErrorMessages();
+    //     User find_user = user_repository.findByEmail(user.getEmail());
+    //     if(find_user == null)
+    //     {
+    //         msgs.add("Email Address Not Found");
+    //         msgs.print();
+    //         return "login";
+    //     }
+    //     String savedPassword = user.getPassword();
+    //     if(!savedPassword.equals(user.getPassword())) {
+    //         msgs.add("Incorrect Password");
+    //         msgs.print();
+    //         return "login";
+    //     }
+    //     return "drinks";
+    // }
     
     // when the register button is clicked on the homepage, the register page will show up
-    @GetMapping(path = "/register")
+    @GetMapping("/register")
     public String registerPage(Model model){
         model.addAttribute("user", new User());
 
@@ -107,12 +104,12 @@ public class UserController {
 
     // post mapping to register user in the database
     // uses BCrypt encoding from Spring Security lab
-    @PostMapping(path = "/registration_success")
+    @PostMapping("/registration_success")
     public String registerUser(User user) throws Exception{
         User find_user = user_repository.findByEmail(user.getEmail());
-        // BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-     //   String encoded_password = passwordEncoder.encode(user.getPassword());
-         if(find_user == null) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encoded_password = passwordEncoder.encode(user.getPassword());
+        if(find_user == null) {
             user.setEmail(user.getEmail());
             user.setPassword(encoded_password);
             user.setFirst_name(user.getFirst_name());
@@ -121,25 +118,16 @@ public class UserController {
         }
         return "registration_success";
     }
-    
-    
-     @PostMapping(path = "/password_changed")
-    public String changedPage(User user){
 
-        return "password_changed";
-    }
-    
-    
-    @GetMapping(path = "/start_page")
-    public String startPage(Model model){
-
-        return "start_page";
-    }
-
-    @GetMapping(path = "/drinks")
+    @RequestMapping(path = "/drinks", method = {RequestMethod.GET, RequestMethod.POST})
     public String drinksPage(Model model){
 
         return "drinks";
     }
 
+    @RequestMapping(path = "/start_page", method = {RequestMethod.GET, RequestMethod.POST})
+    public String startPage(Model model){
+
+        return "start_page";
+    }
 }
