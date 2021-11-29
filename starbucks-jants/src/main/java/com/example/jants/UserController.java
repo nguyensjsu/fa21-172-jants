@@ -110,6 +110,12 @@ public class UserController {
         }
         return "registration_success";
     }
+    
+    @GetMapping(path = "/start_page")
+    public String startPage(Model model){
+
+        return "start_page";
+    }
 
     @GetMapping(path = "/drinks")
     public String drinksPage(Model model){
