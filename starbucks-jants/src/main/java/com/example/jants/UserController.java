@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -52,6 +54,11 @@ public class UserController {
         return "home_page";
     }
 
+    @GetMapping("/admin")
+    public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
+        return "admin";
+    }
+
     @GetMapping("/users")
     public String allUsers(Model model) {
         List<User> list_of_users = user_repository.findAll();
@@ -67,10 +74,10 @@ public class UserController {
     }
  
     // when the login button is clicked on the homepage, the login page will show up
-    @GetMapping("/login")
+    @GetMapping("/login_page")
     public String loginPage(User user)
     {
-        return "login";
+        return "login_page";
     }
 
     // when login button is clicked on Login page, it will go here for validation
@@ -83,13 +90,13 @@ public class UserController {
          {
             msgs.add("Email Address Not Found");
              msgs.print();
-             return "login";
+             return "login_page";
          }
         String savedPassword = user.getPassword();
          if(!savedPassword.equals(user.getPassword())) {
             msgs.add("Incorrect Password");
              msgs.print();
-            return "login";
+            return "login_page";
          }
          return "drinks";
      }
