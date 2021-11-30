@@ -25,7 +25,7 @@ header {
 
 .home {
   width: 300px;
-  height: 100px;
+  height: 200px;
   background: var(--coffee-brown);
   border: solid 2px black;
   border-radius: 10px;
@@ -49,6 +49,20 @@ header {
   text-decoration: none;
   cursor: pointer;
   
+}
+
+.home #loginButton {
+    padding: 30px 90px;
+    position: relative;
+    top: -12px;
+    cursor: pointer;
+}
+
+.home #loginButton a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
 }
 
 .home p {
