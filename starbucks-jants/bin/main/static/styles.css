@@ -25,7 +25,7 @@ header {
 
 .home {
   width: 300px;
-  height: 200px;
+  height: 100px;
   background: var(--coffee-brown);
   border: solid 2px black;
   border-radius: 10px;
@@ -49,20 +49,6 @@ header {
   text-decoration: none;
   cursor: pointer;
   
-}
-
-.home #loginButton {
-    padding: 30px 90px;
-    position: relative;
-    top: -12px;
-    cursor: pointer;
-}
-
-.home #loginButton a {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-
 }
 
 .home p {
@@ -222,51 +208,6 @@ header {
     cursor: pointer;
 }
 
-.start-page
-{
-  width: 400px;
-  height: 250px;
-  background: var(--coffee-brown);
-  border: solid 1px black;
-  top: 60%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  padding: 30px 30px;
-}
-
-.start-page .spb
-{
-  border: none;
-  outline: none;
-  position: relative;
-  top: 20px;
-  left: 20px;
-  height: 40px;
-  width: 300px;
-  background: #327346;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.start-page .spb a
-{
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.start-page .spb:hover
-{
-  background: white;
-  color: #327346;
-  cursor: pointer;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -278,6 +219,21 @@ header {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #327346; 
+}
+
+.drinksTable {
+  
+  position: relative;
+  top: 30px;
+  
+}
+
+table, tr, td {
+  background-color: var(--coffee-brown);
+  padding: 7px;
+  border: 1px solid black;
+  /* border-collapse: collapse; */
+  text-align: center;
 }
 
 footer {
