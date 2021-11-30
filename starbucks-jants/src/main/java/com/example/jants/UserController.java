@@ -66,10 +66,33 @@ public class UserController {
         return "users";
     }
 
-    // post mapping to reset password
+     // when the reset button is clicked on the homepage, the reset page will show up
     @GetMapping("/reset_password")
-    public String resetPassword()
+    public String resetPassword(User user)
     {
+        return "reset_password";
+    }
+    
+    // post mapping to reset password
+    @PostMapping("/password_changed")
+    public String passwordChanged(User user)
+    {
+        User find_user = user_repository.findByEmail(user.getEmail());
+        ErrorMessages msgs = new ErrorMessages();
+        BCryptPasswordEncoder newPasswordEncoder = new BCryptPasswordEncoder();
+        String new_encoded_password = newPasswordEncoder.encode(user.getNew_password());
+        if(find_user == null)
+         {
+            msgs.add("Email Address Not Found");
+            msgs.print();
+            return "reset_password";
+        }
+        String savedPassword = find_user.getPassword();
+        if(savedPassword.equals(user.getPassword())) {
+            find_user.setPassword(new_encoded_password);
+            user_repository.save(find_user);
+            return "password_changed";
+        }
         return "reset_password";
     }
  
@@ -121,6 +144,7 @@ public class UserController {
             user.setPassword(encoded_password);
             user.setFirst_name(user.getFirst_name());
             user.setLast_name(user.getLast_name());
+            user.setNew_password("N/A");
             user_repository.save(user);
         }
         return "registration_success";
