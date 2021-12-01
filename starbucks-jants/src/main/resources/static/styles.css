@@ -226,21 +226,22 @@ header {
     cursor: pointer;
 }
 
-.box .special_button
+.home .special_button
 {
   border: none;
   outline: none;
   position: relative;
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: 16px;
   height: 40px;
-  width: 300px;
+  width: 200px;
   background: #327346;
   color: white;
   font-size: 16px;
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 .goLogin {
   border: none;
@@ -258,17 +259,16 @@ header {
   cursor: pointer;
 }
 
-.box .special_button a
+.home .special_button a
 {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.box .special_button:hover
+.home .special_button:hover
 {
   background: white;
-  color: #327346;
   cursor: pointer;
 }
 
