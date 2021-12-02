@@ -1,38 +1,80 @@
+<!-- src/main/resources/templates/index.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
-    <meta charset="ISO-8859-1">
-    <title>List Users</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin</title>
 </head>
 <body>
-<div class="container text-center">
-    <div>
-        <h1>List of Users</h1>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" width="60px">
+      </div>
+      <header>
+        <h1>Admin</h1>
+      </header>
+
+    <div sec:authorize="!isAuthenticated()">
+        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
     </div>
-     
-    <div>
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>User ID</th>
-                    <th>E-mail</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="user: ${list_of_users}">
-                    <td th:text="${user.id}">User ID</td>
-                    <td th:text="${user.email}">E-mail</td>
-                    <td th:text="${user.first_name}">First Name</td>
-                    <td th:text="${user.last_name}">Last Name</td>
-                </tr>
-            </tbody>
-        </table>
+    <div sec:authorize="isAuthenticated()">
+        <p>You are logged in!</p>
+        <a th:href="@{/logout}">Log Out</a>
     </div>
-</div>
+    <p>All drinks</p>
+  <div class = "drinksTable">
+    <table>
+      <tr>
+        <th>Drink</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Mocha Frappuchino</td>
+        <td>$4.45</td>
+      </tr>
+      <tr>
+        <td>Tripleshot Energy</td>
+        <td>$2.84</td>
+      </tr>
+      <tr>
+        <td>Pumpkin Cream Brew</td>
+        <td>$5.25</td>
+      </tr>
+      <tr>
+        <td>Caramel Frappuchino</td>
+        <td>$4.45</td>
+      </tr>
+      <tr>
+        <td>Toasted White Chocolate Mocha</td>
+        <td>$4.65</td>
+      </tr>
+      <tr>
+        <td>Chestnut Praline Lattle</td>
+        <td>$4.65</td>
+      </tr>
+      <tr>
+        <td>Peppermint Mocha</td>
+        <td>$4.65</td>
+      </tr>
+      <tr>
+        <td>Nitro Cold Brew</td>
+        <td>$3.95</td>
+      </tr>
+      <tr>
+        <td>Caramel Brulée Latte</td>
+        <td>$4.45</td>
+      </tr>
+      <tr>
+        <td>Apple Crisp Macchiato</td>
+        <td>$5.45</td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
+
+
+    
+

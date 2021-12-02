@@ -1,4 +1,4 @@
-package com.example.jants;
+package com.example.backoffice.admin_office;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

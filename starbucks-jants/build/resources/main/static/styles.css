@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body:not(header, .logo, .card) {
+  background-color: rgb(196, 164, 132);
+}
 
 .logo {
   position: absolute;
@@ -40,7 +43,7 @@ header {
 .home #registerButton {
   padding: 30px 90px;
   position: relative;
-  top: -22px; 
+  top: -15px; 
   cursor: pointer;
 }
 
@@ -52,9 +55,9 @@ header {
 }
 
 .home #loginButton {
-    padding: 30px 90px;
+    padding: 30px 99px;
     position: relative;
-    top: -12px;
+    top: -5px;
     cursor: pointer;
 }
 
@@ -104,6 +107,7 @@ header {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -222,29 +226,31 @@ header {
     cursor: pointer;
 }
 
-.start-page
-{
-  width: 400px;
-  height: 250px;
-  background: var(--coffee-brown);
-  border: solid 1px black;
-  top: 60%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  padding: 30px 30px;
-}
-
-.start-page .spb
+.home .special_button
 {
   border: none;
   outline: none;
   position: relative;
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: 16px;
   height: 40px;
-  width: 300px;
+  width: 200px;
+  background: #327346;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.goLogin {
+  border: none;
+  outline: none;
+  position: relative;
+  top: 20px;
+  left: 70px;
+  height: 40px;
+  width: 100px;
   background: #327346;
   color: white;
   font-size: 16px;
@@ -253,17 +259,16 @@ header {
   cursor: pointer;
 }
 
-.start-page .spb a
+.home .special_button a
 {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.start-page .spb:hover
+.home .special_button:hover
 {
   background: white;
-  color: #327346;
   cursor: pointer;
 }
 
@@ -278,6 +283,23 @@ header {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #327346; 
+}
+
+.drinksTable {
+  position: relative;
+  top: 30px;
+}
+
+table, tr, td {
+  padding: 7px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table-table-striped-table-bordered {
+  position: relative;
+  top: 30px;
 }
 
 footer {

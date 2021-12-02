@@ -54,11 +54,6 @@ public class UserController {
         return "home_page";
     }
 
-    @GetMapping("/admin")
-    public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
-        return "admin";
-    }
-
     @GetMapping("/users")
     public String allUsers(Model model) {
         List<User> list_of_users = user_repository.findAll();
@@ -74,26 +69,41 @@ public class UserController {
     }
     
     // post mapping to reset password
+    // @PostMapping("/password_changed")
+    // public String passwordChanged(User user)
+    // {
+    //     User find_user = user_repository.findByEmail(user.getEmail());
+    //     UserInfo uInfo = new UserInfo(find_user);
+    //     ErrorMessages msgs = new ErrorMessages();
+    //     BCryptPasswordEncoder newPasswordEncoder = new BCryptPasswordEncoder();
+    //     String new_encoded_password = newPasswordEncoder.encode(find_user.getNew_password());
+    //     if(find_user == null)
+    //      {
+    //         msgs.add("Email Address Not Found");
+    //         msgs.print();
+    //         return "reset_password";
+    //     }
+    //     String savedPassword = find_user.getPassword();
+    //     if(savedPassword.equals(user.getPassword())) {
+    //         find_user.setPassword(new_encoded_password);
+    //         user_repository.save(find_user);
+    //         return "password_changed";
+    //     }
+    //     return "reset_password";
+    // }
+
     @PostMapping("/password_changed")
-    public String passwordChanged(User user)
-    {
+    public String passwordChanged(User user){
         User find_user = user_repository.findByEmail(user.getEmail());
-        ErrorMessages msgs = new ErrorMessages();
-        BCryptPasswordEncoder newPasswordEncoder = new BCryptPasswordEncoder();
-        String new_encoded_password = newPasswordEncoder.encode(user.getNew_password());
-        if(find_user == null)
-         {
-            msgs.add("Email Address Not Found");
-            msgs.print();
-            return "reset_password";
-        }
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String savedPassword = find_user.getPassword();
-        if(savedPassword.equals(user.getPassword())) {
-            find_user.setPassword(new_encoded_password);
+        System.out.println(savedPassword);
+        if(find_user != null){
+            find_user.setPassword(passwordEncoder.encode(find_user.getNew_password()));
             user_repository.save(find_user);
             return "password_changed";
         }
-        return "reset_password";
+        return null;
     }
  
     // when the login button is clicked on the homepage, the login page will show up
@@ -104,25 +114,25 @@ public class UserController {
     }
 
     // when login button is clicked on Login page, it will go here for validation
-     @PostMapping(path = "/drinks")
-    public String validationPage(User user)
-     {
-         ErrorMessages msgs = new ErrorMessages();
-         User find_user = user_repository.findByEmail(user.getEmail());
-         if(find_user == null)
-         {
-            msgs.add("Email Address Not Found");
-             msgs.print();
-             return "login_page";
-         }
-        String savedPassword = user.getPassword();
-         if(!savedPassword.equals(user.getPassword())) {
-            msgs.add("Incorrect Password");
-             msgs.print();
-            return "login_page";
-         }
-         return "drinks";
-     }
+    // @PostMapping(path = "/drinks")
+    // public String validationPage(User user)
+    //  {
+    //      ErrorMessages msgs = new ErrorMessages();
+    //      User find_user = user_repository.findByEmail(user.getEmail());
+    //      if(find_user == null)
+    //      {
+    //         msgs.add("Email Address Not Found");
+    //          msgs.print();
+    //          return "login_page";
+    //      }
+    //     String savedPassword = user.getPassword();
+    //      if(!savedPassword.equals(user.getPassword())) {
+    //         msgs.add("Incorrect Password");
+    //          msgs.print();
+    //         return "login_page";
+    //      }
+    //      return "drinks";
+    //  }
     
     // when the register button is clicked on the homepage, the register page will show up
     @GetMapping("/register")

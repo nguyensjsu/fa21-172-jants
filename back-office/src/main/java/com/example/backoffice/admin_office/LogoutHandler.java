@@ -1,4 +1,4 @@
-package com.example.jants;
+package com.example.backoffice.admin_office;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
