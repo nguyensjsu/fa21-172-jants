@@ -1,16 +1,26 @@
 <!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-    <body>
+<head>
+    <link rel="stylesheet" href="adminstyles.css">
+</head>    
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" width="60px">
+      </div>
+      <header>
+        <h1>Admin</h1>
+      </header>
         <div sec:authorize="!isAuthenticated()">
             <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
         </div>
         <div sec:authorize="isAuthenticated()">
             <p>You are logged in!</p>
             
-            <a href="admin/rewards"><button id="rewardsButton">Rewards</button></a>
-            <a href="admin/users"><button id="usersButton">Users</button></a>
-            <a href="admin/orders"><button id="ordersButton">Orders</button></a>
-
+            <a href="admin/rewards"><button id="special_button">Rewards</button></a>
+            <a href="admin/users"><button id="special_button">Users</button></a>
+            <a href="admin/orders"><button id="special_button">Orders</button></a>
+            <br>
             <a th:href="@{/logout}">Log Out</a>
         </div>
     </body>
