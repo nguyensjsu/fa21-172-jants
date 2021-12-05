@@ -364,3 +364,32 @@ footer {
    width: 100%;
    text-align: center;
 }
+
+.help {
+  display: flex;
+  background-color: #327346;
+  position: absolute;
+  right: 100;
+  bottom: -5px;
+  height: 100px;
+  color: black;
+  margin-bottom: 0 auto;
+  padding: 5px;
+}
+.help b {
+  position: relative;
+  bottom: -5px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.help p {
+  position:relative;
+  bottom: -10px;
+  left: -20px;
+  text-align: left;
+  color: white;
+}
+.help a {
+  text-decoration: none;
+  color: white;
+}
