@@ -9,12 +9,16 @@
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div sec:authorize="!isAuthenticated()">
-        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" width="60px">
     </div>
     <header>
         <h1>Orders</h1>
-      </header>
+    </header>
+<br>
+    <div sec:authorize="!isAuthenticated()">
+        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
+    </div>
     <div sec:authorize="isAuthenticated()">
         <p>You are logged in!</p>
         <a href="rewards"><button id="special_button">Rewards</button></a>
