@@ -54,13 +54,6 @@ public class UserController {
         return "home_page";
     }
 
-    @GetMapping("/users")
-    public String allUsers(Model model) {
-        List<User> list_of_users = user_repository.findAll();
-        model.addAttribute("list_of_users", list_of_users);
-        return "users";
-    }
-
      // when the reset button is clicked on the homepage, the reset page will show up
     @GetMapping("/reset_password")
     public String resetPassword(User user)

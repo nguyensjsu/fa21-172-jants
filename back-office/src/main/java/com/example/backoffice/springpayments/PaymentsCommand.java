@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @RequiredArgsConstructor
 @Getter
 @Setter
-class PaymentsCommand {
+public class PaymentsCommand {
     private @Id @GeneratedValue Long id;
 
     private String drink;
