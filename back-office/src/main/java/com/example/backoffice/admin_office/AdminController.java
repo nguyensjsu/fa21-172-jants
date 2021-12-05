@@ -14,6 +14,7 @@ import com.example.backoffice.springrewards.RewardRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,6 +56,25 @@ public class AdminController {
         return "admin_users";
     }
 
+    @GetMapping("/admin/users/edit")
+    public String resetPassword(@Valid @ModelAttribute("user") User user, Model model, HttpServletRequest request)
+    {
+        model.addAttribute("user", user);
+        return "admin_users_edit";
+    }
+
+    @PostMapping("/password_changed")
+    public String passwordChanged(@Valid @ModelAttribute("user") User user, Model model, HttpServletRequest request){
+        User find_user = user_repository.findByEmail(user.getEmail());
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        if(find_user != null){
+            find_user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user_repository.save(find_user);
+            return "password_changed";
+        }
+        return null;
+    }
+
     @GetMapping("/admin/rewards")
     public String getListOfRewards(@Valid @ModelAttribute("reward") Reward reward, Model model, HttpServletRequest request){
         List<Reward> list_of_rewards = reward_repository.findAll();
@@ -79,4 +99,6 @@ public class AdminController {
         }
         return null;
     }
+
+    
 }
