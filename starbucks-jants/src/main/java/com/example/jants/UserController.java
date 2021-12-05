@@ -26,6 +26,9 @@ public class UserController {
     @Autowired
     private UserRepository user_repository;
 
+    @Autowired 
+    private Reward reward_repository;
+
     @Getter
     @Setter
     class Message{
@@ -117,7 +120,7 @@ public class UserController {
     // post mapping to register user in the database
     // uses BCrypt encoding from Spring Security lab
     @PostMapping("/registration")
-    public String registerUser(User user, Model model) throws Exception{
+    public String registerUser(User user, Model model, Reward reward) throws Exception{
         User find_user = user_repository.findByEmail(user.getEmail());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encoded_password = passwordEncoder.encode(user.getPassword());
@@ -127,6 +130,12 @@ public class UserController {
             user.setFirst_name(user.getFirst_name());
             user.setLast_name(user.getLast_name());
             user_repository.save(user);
+
+            reward.setEmail(user.getEmail());
+            reward.setStarsBalance(100);
+            reward.setRedeemedPoints(0);
+            reward.setRedeemedItem("N/A");
+            reward_repository.save(reward);
             return "registration_success";
         }
         else{

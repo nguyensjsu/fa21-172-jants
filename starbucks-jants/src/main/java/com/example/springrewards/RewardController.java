@@ -64,14 +64,14 @@ public class RewardController {
     public String enterReward(Reward reward, @AuthenticationPrincipal UserInfo user)
     {
         Reward find_reward = reward_repository.findByEmail(user.getUsername());
-        if(find_reward == null)
-        {
-            reward.setEmail(user.getUsername());
-            reward.setStarsBalance(100);
-            reward.setRedeemedPoints(0);
-            reward.setRedeemedItem("N/A");
-            reward_repository.save(reward);
-        }
+        // if(find_reward == null)
+        // {
+        //     reward.setEmail(user.getUsername());
+        //     reward.setStarsBalance(100);
+        //     reward.setRedeemedPoints(0);
+        //     reward.setRedeemedItem("N/A");
+        //     reward_repository.save(reward);
+        // }
         
         return "enter_rewards";
     }
