@@ -6,6 +6,11 @@
         </div>
         <div sec:authorize="isAuthenticated()">
             <p>You are logged in!</p>
+            
+            <a href="admin/rewards"><button id="rewardsButton">Rewards</button></a>
+            <a href="admin/users"><button id="usersButton">Users</button></a>
+            <a href="admin/orders"><button id="ordersButton">Orders</button></a>
+
             <a th:href="@{/logout}">Log Out</a>
         </div>
     </body>

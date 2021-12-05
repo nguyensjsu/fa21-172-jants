@@ -12,8 +12,13 @@
     <div sec:authorize="!isAuthenticated()">
         <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
     </div>
+    <header>
+        <h1>Orders</h1>
+      </header>
     <div sec:authorize="isAuthenticated()">
         <p>You are logged in!</p>
+        <a href="rewards"><button id="rewardsButton">Rewards</button></a>
+        <a href="users"><button id="usersButton">Users</button></a>
         <a th:href="@{/logout}">Log Out</a>
     </div>
     <div>
