@@ -17,7 +17,7 @@
       </header>
     <div class="box">
             <h1>Sign Up</h1>
-            <form th:action="@{/registration_success}" th:object="${user}" name="form2" method="post">
+            <form th:action="@{/registration}" th:object="${user}" name="form2" method="post">
                  <p>First Name</p>
                  <input type="text" th:field="*{first_name}" required minlength="1" name="i1" placeholder="Enter First Name">
                  <p>Last Name</p>

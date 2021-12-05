@@ -277,6 +277,38 @@ header {
   cursor: pointer;
 }
 
+.goToLogin {
+  border: none;
+  outline: none;
+  position: relative;
+  top: 0px;
+  left: 20px;
+  height: 40px;
+  width: 100px;
+  background: #327346;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.goToRegister {
+  border: none;
+  outline: none;
+  position: relative;
+  top: -10px;
+  left: 20px;
+  height: 40px;
+  width: 100px;
+  background: #327346;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .home .special_button a
 {
   color: white;

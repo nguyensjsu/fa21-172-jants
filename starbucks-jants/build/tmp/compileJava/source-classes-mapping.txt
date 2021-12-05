@@ -2,8 +2,8 @@ com/example/drinkslist/DrinksList.java
  com.example.drinkslist.DrinksList
 com/example/springcybersource/RefundRequest.java
  com.example.springcybersource.RefundRequest
-com/example/springpayments/PaymentsCommandRepository.java
- com.example.springpayments.PaymentsCommandRepository
+com/example/jants/WebSecurityConfig.java
+ com.example.jants.WebSecurityConfig
 com/example/drinkslist/Caramelfrap.java
  com.example.drinkslist.Caramelfrap
 com/example/springrewards/RewardRepository.java
@@ -42,10 +42,8 @@ com/example/jants/UserRepository.java
  com.example.jants.UserRepository
 com/example/springpayments/PaymentsCommand.java
  com.example.springpayments.PaymentsCommand
-com/example/jants/UserController.java
- com.example.jants.UserController
- com.example.jants.UserController$ErrorMessages
- com.example.jants.UserController$Message
+com/example/springpayments/PaymentsCommandRepository.java
+ com.example.springpayments.PaymentsCommandRepository
 com/example/springcybersource/Payload.java
  com.example.springcybersource.Payload
 com/example/StarbucksApplication.java
@@ -54,8 +52,10 @@ com/example/drinkslist/Tripleshot.java
  com.example.drinkslist.Tripleshot
 com/example/drinkslist/DrinkOrder.java
  com.example.drinkslist.DrinkOrder
-com/example/drinkslist/Nitro.java
- com.example.drinkslist.Nitro
+com/example/springpayments/PaymentsController.java
+ com.example.springpayments.PaymentsController
+ com.example.springpayments.PaymentsController$ErrorMessages
+ com.example.springpayments.PaymentsController$Message
 com/example/springcybersource/RefundResponse.java
  com.example.springcybersource.RefundResponse
 com/example/springcybersource/CaptureRequest.java
@@ -65,9 +65,9 @@ com/example/springcybersource/CyberSourceAPI.java
  com.example.springcybersource.CyberSourceAPI$PostResponse
 com/example/jants/UserInfoService.java
  com.example.jants.UserInfoService
-com/example/springpayments/PaymentsController.java
- com.example.springpayments.PaymentsController
- com.example.springpayments.PaymentsController$ErrorMessages
- com.example.springpayments.PaymentsController$Message
-com/example/jants/WebSecurityConfig.java
- com.example.jants.WebSecurityConfig
+com/example/drinkslist/Nitro.java
+ com.example.drinkslist.Nitro
+com/example/jants/UserController.java
+ com.example.jants.UserController
+ com.example.jants.UserController$ErrorMessages
+ com.example.jants.UserController$Message

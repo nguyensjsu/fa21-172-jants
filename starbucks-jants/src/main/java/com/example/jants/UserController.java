@@ -137,8 +137,8 @@ public class UserController {
 
     // post mapping to register user in the database
     // uses BCrypt encoding from Spring Security lab
-    @PostMapping("/registration_success")
-    public String registerUser(User user) throws Exception{
+    @PostMapping("/registration")
+    public String registerUser(User user, Model model) throws Exception{
         User find_user = user_repository.findByEmail(user.getEmail());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encoded_password = passwordEncoder.encode(user.getPassword());
@@ -149,8 +149,12 @@ public class UserController {
             user.setLast_name(user.getLast_name());
             user.setNew_password("N/A");
             user_repository.save(user);
+            return "registration_success";
         }
-        return "registration_success";
+        else{
+            model.addAttribute("User already exists. Please register with new email or login.");
+            return "register_fail";
+        }
     }
 
     @RequestMapping(path = "/drinks", method = {RequestMethod.GET, RequestMethod.POST})
