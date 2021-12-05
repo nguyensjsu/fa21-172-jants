@@ -18,7 +18,7 @@ public class Reward {
     private @Id @GeneratedValue Long id;
 
     private String email;
-    private int starsBalance;
+    public int starsBalance;
     private int redeemedPoints;
     private String redeemedItem;
 }
