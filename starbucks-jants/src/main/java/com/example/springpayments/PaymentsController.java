@@ -41,6 +41,8 @@ import com.example.jants.User;
 import com.example.jants.UserInfo;
 import com.example.jants.UserRepository;
 import com.example.springcybersource.*;
+import com.example.springrewards.Reward;
+import com.example.springrewards.RewardRepository;
 
 // referenced code from spring-cybersource as well as follows lab structure of recording on zoom
 
@@ -131,6 +133,9 @@ public class PaymentsController {
     @Autowired
     private PaymentsCommandRepository payments_repository;
 
+    @Autowired
+    private RewardRepository reward_repository;
+
 
     @GetMapping("/creditcards/{drink_order_name}")
     public String getAction(@Valid @ModelAttribute("command") PaymentsCommand command, 
@@ -175,7 +180,7 @@ public class PaymentsController {
     }
 
     @PostMapping("/creditcards/{drink_order_name}")
-    public String postAction(@Valid @ModelAttribute("command") PaymentsCommand command,  
+    public String postAction(@Valid @ModelAttribute("command") PaymentsCommand command, @AuthenticationPrincipal UserInfo user, 
                             @RequestParam(value="action", required=true) String action,
                             Errors errors, Model model, HttpServletRequest request, @PathVariable("drink_order_name") String drink_order_name){
         DrinksList drink = new DrinkOrder(drink_order_name).set();
@@ -299,6 +304,9 @@ public class PaymentsController {
             command.setAuthStatus(authResponse.status);
             command.setCaptureId(captureResponse.id);
             command.setCaptureStatus(captureResponse.status);
+            Reward find_reward = reward_repository.findByEmail(user.getUsername());
+            find_reward.setStarsBalance(find_reward.getStarsBalance() + 20);
+            reward_repository.save(find_reward);
             payments_repository.save(command);
             System.out.println("Thank You for Your Payment! Your Order Number is: " + order_num);
             model.addAttribute("message", "Thank You for Your Payment! Your Order Number is: " + order_num) ;

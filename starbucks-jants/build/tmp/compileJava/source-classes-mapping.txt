@@ -2,16 +2,22 @@ com/example/drinkslist/DrinksList.java
  com.example.drinkslist.DrinksList
 com/example/springcybersource/RefundRequest.java
  com.example.springcybersource.RefundRequest
-com/example/jants/WebSecurityConfig.java
- com.example.jants.WebSecurityConfig
+com/example/springpayments/PaymentsCommandRepository.java
+ com.example.springpayments.PaymentsCommandRepository
 com/example/drinkslist/Caramelfrap.java
  com.example.drinkslist.Caramelfrap
+com/example/springrewards/RewardRepository.java
+ com.example.springrewards.RewardRepository
 com/example/drinkslist/MochaFrap.java
  com.example.drinkslist.MochaFrap
 com/example/drinkslist/Applecrisp.java
  com.example.drinkslist.Applecrisp
 com/example/springcybersource/AuthResponse.java
  com.example.springcybersource.AuthResponse
+com/example/springrewards/RewardController.java
+ com.example.springrewards.RewardController
+ com.example.springrewards.RewardController$ErrorMessages
+ com.example.springrewards.RewardController$Message
 com/example/drinkslist/Chestnutpralinelatte.java
  com.example.drinkslist.Chestnutpralinelatte
 com/example/jants/UserInfo.java
@@ -20,6 +26,8 @@ com/example/springcybersource/CaptureResponse.java
  com.example.springcybersource.CaptureResponse
 com/example/jants/User.java
  com.example.jants.User
+com/example/springrewards/Reward.java
+ com.example.springrewards.Reward
 com/example/drinkslist/Caramelbruleelatte.java
  com.example.drinkslist.Caramelbruleelatte
 com/example/springcybersource/AuthRequest.java
@@ -34,8 +42,10 @@ com/example/jants/UserRepository.java
  com.example.jants.UserRepository
 com/example/springpayments/PaymentsCommand.java
  com.example.springpayments.PaymentsCommand
-com/example/springpayments/PaymentsCommandRepository.java
- com.example.springpayments.PaymentsCommandRepository
+com/example/jants/UserController.java
+ com.example.jants.UserController
+ com.example.jants.UserController$ErrorMessages
+ com.example.jants.UserController$Message
 com/example/springcybersource/Payload.java
  com.example.springcybersource.Payload
 com/example/StarbucksApplication.java
@@ -44,10 +54,8 @@ com/example/drinkslist/Tripleshot.java
  com.example.drinkslist.Tripleshot
 com/example/drinkslist/DrinkOrder.java
  com.example.drinkslist.DrinkOrder
-com/example/springpayments/PaymentsController.java
- com.example.springpayments.PaymentsController
- com.example.springpayments.PaymentsController$ErrorMessages
- com.example.springpayments.PaymentsController$Message
+com/example/drinkslist/Nitro.java
+ com.example.drinkslist.Nitro
 com/example/springcybersource/RefundResponse.java
  com.example.springcybersource.RefundResponse
 com/example/springcybersource/CaptureRequest.java
@@ -57,9 +65,9 @@ com/example/springcybersource/CyberSourceAPI.java
  com.example.springcybersource.CyberSourceAPI$PostResponse
 com/example/jants/UserInfoService.java
  com.example.jants.UserInfoService
-com/example/drinkslist/Nitro.java
- com.example.drinkslist.Nitro
-com/example/jants/UserController.java
- com.example.jants.UserController
- com.example.jants.UserController$ErrorMessages
- com.example.jants.UserController$Message
+com/example/springpayments/PaymentsController.java
+ com.example.springpayments.PaymentsController
+ com.example.springpayments.PaymentsController$ErrorMessages
+ com.example.springpayments.PaymentsController$Message
+com/example/jants/WebSecurityConfig.java
+ com.example.jants.WebSecurityConfig

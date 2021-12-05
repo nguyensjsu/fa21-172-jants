@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>List of Payments</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div sec:authorize="!isAuthenticated()">
+        <a th:href="@{/oauth2/authorization/auth0}">Log In</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <p>You are logged in!</p>
+        <a th:href="@{/logout}">Log Out</a>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Email</th>
+                    <th>Drink</th> 
+                    <th>Notes</th>
+
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="payment: ${list_of_payments}">
+                    <td th:text="${payment.firstname}">First Name</td>
+                    <td th:text="${payment.lastname}">Last Name</td>
+                    <td th:text="${payment.address}">Address</td>
+                    <td th:text="${payment.city}">City</td>
+                    <td th:text="${payment.state}">State</td>
+                    <td th:text="${payment.zip}">Zip</td>
+                    <td th:text="${payment.email}">Email</td>
+                    <td th:text="${payment.drink}">Drink</td>
+                    <td th:text="${payment.notes}">Notes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -14,9 +14,18 @@
     <title>Credit Cards</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" th:href="@{/creditcard.css}" />
+    <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 
 <body>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" width="60px">
+      </div>
+      <header>
+        <h1>Pay Here</h1>
+        <h3><a th:href = "@{/drinks}">Drinks</a></h3>
+        <h3><a th:href = "@{/orders}">Previous Orders</a></h3>
+      </header>
 
 <!-- FORM SECTION -->
 <form name="form" th:object="${command}" method="post" th:action="@{/creditcards/{name}(name=${drink_order_name})}">

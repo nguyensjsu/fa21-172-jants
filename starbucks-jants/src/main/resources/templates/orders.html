@@ -14,25 +14,23 @@
       </div>
       <header>
         <h1>List of Payments</h1>
+        <h3><a th:href = "@{/start_page}">Logout</a></h3>
+        <h3><a th:href = "@{/drinks}">Drinks</a></h3>
+        <h3><a th:href = "@{/logout}">Logout</a></h3>
       </header>
      
     <div>
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Payment ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Address</th>
                     <th>City</th>
                     <th>State</th>
                     <th>Zip</th>
-                    <th>Phone Number</th>
-                    <th>Card Number</th>
-                    <th>Exp Month</th>
-                    <th>Exp Year</th>
-                    <th>CVV</th>
                     <th>Email</th>
+                    <th>Drink</th> 
                     <th>Notes</th>
 
                     
@@ -40,19 +38,14 @@
             </thead>
             <tbody>
                 <tr th:each="payment: ${list_of_payments}">
-                    <td th:text="${payment.id}">Payment ID</td>
                     <td th:text="${payment.firstname}">First Name</td>
                     <td th:text="${payment.lastname}">Last Name</td>
                     <td th:text="${payment.address}">Address</td>
                     <td th:text="${payment.city}">City</td>
                     <td th:text="${payment.state}">State</td>
                     <td th:text="${payment.zip}">Zip</td>
-                    <td th:text="${payment.phonenumber}">Phone Number</td>
-                    <td th:text="${payment.cardnumber}">Card Number</td>
-                    <td th:text="${payment.expmonth}">Exp Month</td>
-                    <td th:text="${payment.expyear}">Exp Year</td>
-                    <td th:text="${payment.cvv}">CVV</td>
                     <td th:text="${payment.email}">Email</td>
+                    <td th:text="${payment.drink}">Drink</td>
                     <td th:text="${payment.notes}">Notes</td>
                 </tr>
             </tbody>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Rewards Page</title>
+    <link href = "styles.css" rel = "stylesheet" type = "text/css">
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" width="60px">
+    </div>
+    <header>
+        <h1>Redeem Rewards</h1>
+    </header>
+    <div class="box">
+        <h1>Enter Rewards</h1>
+        
+        <form th:action="@{/reward_redeemed}" th:object="${reward}" name="form2" method="post">
+            <p> 25 Stars = Free Cafe Latte </p>
+            <p> 50 Stars = Free Starbucks Tumbler </p>
+            <p> 75 Stars = Free Starbucks Coffee Mug </p>
+            <p> 100 Stars = Free Bag of Coffee </p>
+            <br>
+            <br>
+            <p>Enter Stars</p>
+            <br>
+            <input th:field="*{redeemedPoints}" type="number" name="i1" required placeholder="Enter Stars">
+            <input type="submit" name="b1" value="Redeem">
+        </form>
+        
+    </div>
+</body>
+</html>
