@@ -3,6 +3,9 @@ package com.example.jants;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.springrewards.Reward;
+import com.example.springrewards.RewardRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -27,7 +30,7 @@ public class UserController {
     private UserRepository user_repository;
 
     @Autowired 
-    private Reward reward_repository;
+    private RewardRepository reward_repository;
 
     @Getter
     @Setter
