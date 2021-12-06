@@ -1,13 +1,12 @@
-
 # ------------------------------------------------------------------------------
-# This is the kong file to get API gatway started with using
+# This is an example file to get you started with using
 # declarative configuration in Kong.
 # ------------------------------------------------------------------------------
 
 # Metadata fields start with an underscore (_)
 # Fields that do not start with an underscore represent Kong entities and attributes
 
-# _format_version is mandatory, because
+# _format_version is mandatory,
 # it specifies the minimum version of Kong that supports the format
 
 _format_version: "1.1"
@@ -15,7 +14,7 @@ _format_version: "1.1"
 services:
 - name: starbucks
   protocol: http
-  host: starbucks-api-jants
+  host: starbucks
   port: 8080
   path: /
   plugins:
@@ -30,16 +29,13 @@ services:
   - name: Rewards
     paths:
       - /rewards
+    
 consumers:
 - username: apiclient
   keyauth_credentials:
   - key: 2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ
 
-# Here the API key is the same as the one
-# provided by professor in Lab 08 starter code
-# this doesnot mean that we are using our local 
-# preconfigured Gateway. We have made a new kong.yaml 
-# file for this project that maps to our own API.
+
 
 # Each Kong entity (core entity or custom entity introduced by a plugin)
 # can be listed in the top-level as an array of objects:
@@ -97,4 +93,3 @@ consumers:
 #   tags:
 #   - extra_limits
 #   - my_tag
-
