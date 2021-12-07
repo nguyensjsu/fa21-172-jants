@@ -14,5 +14,5 @@
 
 ### Challenges
 
-* Need to figure out a way to add rewards.
-* Need to work on the problems in reset password functionality.
+* Need to figure out a way to add rewards (Functionality added by Surya).
+* Need to work on the problems in reset password functionality (Fixed by me).
