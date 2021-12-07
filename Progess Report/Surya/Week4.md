@@ -11,6 +11,15 @@
 - Starting to configure yaml files for deployment
 - Creating MySQL Cloud Instance to communicate with application
 
+### List of Commits
+* [rewards mapped to user sign on](https://github.com/nguyensjsu/fa21-172-jants/commit/62f1e2ddce5c2c534fa607d15061532f461fe6fc)
+* [fixed error with payments routing](https://github.com/nguyensjsu/fa21-172-jants/commit/9408dccf0d7053377a848c8816b7546a06648b33)
+* [back office function reward points editing - worked with Tanav](https://github.com/nguyensjsu/fa21-172-jants/commit/c50fc4341e57bffc8426a9b8856dd0a0547bfe99)
+* [fixed unique registration error](https://github.com/nguyensjsu/fa21-172-jants/commit/a8f8ff96eb7fa122c32ba09507225d43c0a639af)
+* [update rest APIs for back office](https://github.com/nguyensjsu/fa21-172-jants/commit/ce3d151eeb5658865308a67ab7159c6f8ab0a4f1)
+* [reward points added to sign up rather than using a seperate button after sign up](https://github.com/nguyensjsu/fa21-172-jants/commit/d03ed63758267d3628fd8b38f6c22cd3a875ddb6)
+* [gke deployment files](https://github.com/nguyensjsu/fa21-172-jants/commit/22cb40d4afb7ae2459658e9623f5b7c76f7e38ff)
+
 ### Challenges
 - GKE deployment - problems with ingress deployment.yaml due to mysql integration (fixed by setting up connection and private instances)
 - auth0 not working in backend GKE because of callback uri not configured (fixed by letting the admin(Tanav) integrate uri in)
