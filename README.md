@@ -24,6 +24,7 @@ Our project has implemented the following functional requirements:
 	* Edit the list of users
 	* See the list of rewards
 	* Edit the list of rewards
+	* See the list of orders
 
 * REST APIs: Back Office and Front Office Applications are integrated with "Backends" using REST APIs.
 
