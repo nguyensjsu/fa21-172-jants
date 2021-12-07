@@ -6,7 +6,7 @@ Prepared by JANTS Group
 
 ![image](https://user-images.githubusercontent.com/60376265/144949969-c8970925-2167-4832-8d39-8a6251252489.png)
 
-### Functional Requirements
+### Functional Requirements and Screenshots
 
 Our project has implemented the following functional requirements:
 
@@ -28,6 +28,7 @@ Our project has implemented the following functional requirements:
 
 * REST APIs: Back Office and Front Office Applications are integrated with "Backends" using REST APIs.
 
+
 ### Technical Requirements
 
 Our project has implemented the following technical requirements:
@@ -41,3 +42,44 @@ Our project has implemented the following technical requirements:
 
 ### Screenshots
 
+### Front Office Application with MYSQL GCP
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/register%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/register%20success.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/login%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/login_success.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/drinks%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/payments%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/payments%20processed.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/previous%20orders.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/redeem%20rewards%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/redeem%20rewards%202.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/cybersource%201.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/cybersource%20transaction%20data%202.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/cybersource%20transaction%20data.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/cloudsql%20gcp.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/user%20register%20mysql.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rewards%20mysql%20table.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/payments%20mysql%20table.PNG)
+
+### Back Office Application with MYSQL GCP
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20home%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/auth0.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20log%20in.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/edit%20user%20admin.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/user%20details%20changed%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/edit%20rewards%20admin.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/updated%20rewards%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rewards%20mysql%20after%20back%20office%20changes.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20logout%20reroute%20page.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/logout%20reroute%20page.PNG)
+
+### REST API + KONG with MYSQL GCP
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rewards%20api%20admin.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rest%20api%20users%20admin.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rest%20api%20orders%20admin.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-users.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-users%202.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-rewards.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-rewards-2.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders%202.PNG)
