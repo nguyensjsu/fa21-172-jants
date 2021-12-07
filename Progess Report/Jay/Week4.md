@@ -16,4 +16,4 @@
 
 * These are the cards that I worked on.
 
-![Image of Jay's Cards](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Jay/image/Jay's Cards.png)
+![Image of Jay's Cards](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Jay/image/Jay's%20Cards.png)
