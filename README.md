@@ -58,7 +58,7 @@ Our project has implemented the following technical requirements:
 
 ### Screenshots
 
-### Front Office Application with MYSQL GCP
+### Front Office Application with MYSQL GCP and Cybersource Payment Integration
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/register%20page.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/register%20success.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/login%20page.PNG)
@@ -78,7 +78,7 @@ Our project has implemented the following technical requirements:
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/payments%20mysql%20table.PNG)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-### Back Office Application with MYSQL GCP
+### Back Office Application with MYSQL GCP and Auth0(SSO)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20home%20page.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/auth0.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20log%20in.PNG)
@@ -101,6 +101,14 @@ Our project has implemented the following technical requirements:
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-rewards-2.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders%202.PNG)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+### Cloud deployment on GCP with CloudSQL
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/gcp%20workloads.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/gcp%20services.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/gcp%20ingress.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/gcp%20cloudsql.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/gcp%20cloudsql%202.PNG)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ### Local host container and docker hub container
