@@ -1,6 +1,6 @@
 # Starbucks Project
 
-## Tanav Kudupudi's Individual Status Report for Week 2
+## Tanav Kudupudi's Individual Status Report for Week 3
 
 ### My Accomplishments
 
