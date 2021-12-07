@@ -2,3 +2,7 @@
 # Project Report:
 Prepared by JANTS Group
 
+## System Architecture Diagram
+
+### Screenshots
+
