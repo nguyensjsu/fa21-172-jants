@@ -17,6 +17,7 @@ Our project has implemented the following functional requirements:
 	* Redeem rewards
 	* Place an order for their drink
 	* Pay for their drink
+	* See list of their own previous orders
 
 * Back Office: A "Back Office" Web Application that allows the admin to access the following help desk functions:
 
@@ -38,7 +39,7 @@ Our project has implemented the following technical requirements:
 	* MySQL Database 8.0
 	* RabbitMQ
 * Kong API Gateway
-* Back Office Portals SSO Integration
+* Back Office Portals SSO Integration (Auth0 Extra Credit)
 
 ### Screenshots
 
@@ -61,6 +62,7 @@ Our project has implemented the following technical requirements:
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rewards%20mysql%20table.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/payments%20mysql%20table.PNG)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ### Back Office Application with MYSQL GCP
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20home%20page.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/auth0.PNG)
@@ -73,6 +75,7 @@ Our project has implemented the following technical requirements:
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/admin%20logout%20reroute%20page.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/logout%20reroute%20page.PNG)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ### REST API + KONG with MYSQL GCP
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rewards%20api%20admin.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/rest%20api%20users%20admin.PNG)
@@ -83,3 +86,8 @@ Our project has implemented the following technical requirements:
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-rewards-2.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders.PNG)
 ![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/kong%20admin-orders%202.PNG)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+### Local host container and docker hub container
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/mysql%20local%20host%20container.PNG)
+![image](https://github.com/nguyensjsu/fa21-172-jants/blob/main/images/docker%20hub%20containers%20stored.PNG)
