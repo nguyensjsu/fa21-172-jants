@@ -8,6 +8,9 @@
 - added functionality towards the register page to make register emails unique
 - mapped funcitonality of payment page to display when a certain drink is selected
 
+### List of commits 
+[register and payment functionlity with drinks](https://github.com/nguyensjsu/fa21-172-jants/commit/35ad88bba8d78a54e28949df12e129eeb9f593b0)
+
 ### Challenges and What needs to be worked on
 - mapping each drink to a certain price in the payment page (done: 11/25)
 - updating payment page to output drink chosen by user (done: 11/25)
