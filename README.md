@@ -8,18 +8,18 @@ Prepared by JANTS Group
 
 
 ### List of Team Journals
-- Individual contributions can be found below
+Individual contributions can be found below
 
-Anvay Bhanap - [Anvay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Anvay)
-&nbsp;
-Tanav Kudupudi - [Tanav's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Tanav)
-&nbsp;
-Nimay Patel - [Nimay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Nimay)
-&nbsp;
-Jay Solanki - [Jay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Jay)
-&nbsp;
-Surya Ram - [Surya's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Surya)
-&nbsp;
+* Anvay Bhanap - [Anvay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Anvay)
+
+* Tanav Kudupudi - [Tanav's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Tanav)
+
+* Nimay Patel - [Nimay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Nimay)
+
+* Jay Solanki - [Jay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Jay)
+
+* Surya Ram - [Surya's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Surya)
+
 
 ### Functional Requirements and Screenshots
 
