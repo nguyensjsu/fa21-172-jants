@@ -6,6 +6,16 @@ Prepared by JANTS Group
 
 ![image](https://user-images.githubusercontent.com/60376265/144949969-c8970925-2167-4832-8d39-8a6251252489.png)
 
+
+### List of Team Journals
+- Individual contributions can be found below
+
+Anvay Bhanap - [Anvay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Anvay)
+Tanav Kudupudi - [Tanav's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Tanav)
+Nimay Patel - [Nimay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Nimay)
+Jay Solanki - [Jay's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Jay)
+Surya Ram - [Surya's Journal](https://github.com/nguyensjsu/fa21-172-jants/tree/main/Progess%20Report/Surya)
+
 ### Functional Requirements and Screenshots
 
 Our project has implemented the following functional requirements:
