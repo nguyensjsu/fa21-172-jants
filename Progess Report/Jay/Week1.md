@@ -9,4 +9,4 @@
 
 ### Challenges
 
-* Needed to add the java functionality to the reset password page.
+* Need to add the java functionality to the reset password page.
